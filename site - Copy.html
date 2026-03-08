@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proiect Fizică | Sunete infrasunete & Utrasunete</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav id="main-nav" class="navbar at-top">
+    <div class="nav-container">
+        
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sunetul">Sunetul</a></li>
+            <li><a href="#ultra">Ultrasunete</a></li>
+            <li><a href="#infra">Infrasunete</a></li>
+            <li><a href="#stiai-ca">Știai că?</a></li>
+            <li><a href="#experiment">Experiment</a></li>
+            <li><a href="#kahoot">Kahoot</a></li>
+			<li><a href="#concluzii">Concluzii</a></li>
+            <li><a href="#bibliografie">Bibliografie</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header id="home" class="hero">
+    <div class="hero-content">
+       
+        <h1>Ultrasunete și Infrasunete</h1>
+        <p>Explorarea infrasunetelor si a ultrasunetelor</p>
+        
+        <div class="authors-box" style="margin-top: 30px; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p style="font-size: 0.9rem; color: var(--primary-mov); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Autori:</p>
+            <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 5px;">
+                Gheorghe Alexandru Andrei • Pisoschi Alexandru • Rada Mihai Ștefan
+            </p>
+            <p style="font-size: 1rem; color: var(--text-secondary); font-style: italic;">
+                Colegiul Național de Informatică „Tudor Vladimirescu” (CNTVB)
+            </p>
+        </div>
+
+        <div class="cta-container" style="margin-top: 40px;">
+            <a href="#sunetul" class="cta-button liquid-glass">Începe Explorarea</a>
+        </div>
+    </div>
+</header>
+
+<section id="sunetul" class="content-section">
+    <div class="container">
+        <span class="badge badge-blue">Introducere</span>
+        <h2>Ce este sunetul?</h2>
+        
+        <div class="intro-text">
+            <p>În fizică, sunetul este o vibrație care se propagă de obicei ca o undă de presiune audibilă, printr-un mediu de transmisie, cum ar fi un gaz, lichid sau solid.</p>
+            <p>La oameni, auzul are loc când vibrațiile de frecvențe între 15 și 20.000 de hertzi ajung la urechea internă.</p>
+            <p>Hertzul (Hz) este unitatea de măsură a frecvenței egală cu o perioadă pe secundă. Astfel, vibrațiile ajung la urechea internă când sunt transmise prin aer.</p>
+        </div>
+
+        <div class="grid">
+            <a href="#infra" class="card-link">
+                <div class="card">
+                    <h3 style="color: #ff4d4d;">Infrasunetele</h3>
+                    <p>Au frecvențe foarte joase, sub 20 Hz, și pot parcurge distanțe mari.</p>
+                </div>
+            </a>
+            
+            <a href="#ultra" class="card-link">
+                <div class="card">
+                    <h3 style="color: var(--primary-mov);">Ultrasunetele</h3>
+                    <p>Au frecvențe foarte înalte, peste 20.000 Hz.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="ultra" class="content-section gray-bg">
+    <div class="container">
+        <span class="badge badge-blue">F > 20.000 Hz</span>
+        <h2>Ultrasunetele</h2>
+        <div class="intro-text">
+            <p>Sunt vibrații mecanice cu frecvențe înalte (peste 20.000 Hz) imperceptibile auzului uman, utilizate pe scară largă în medicină atât pentru imagistică (ecografie), cât și în fizioterapie.</p>
+            <p>Ultrasunetele au lungime de undă mică comparativ cu infrasunetele. Acestea sunt direcționale și precise.</p>
+        </div>
+
+        <div class="grid">
+            <a href="#detalii-ultra" onclick="setupSurse()" class="card-link">
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: var(--primary-mov);">Surse de ultrasunete</h3>
+                    <p>Artificiale și Naturale (Lilieci, Delfini)</p>
+                </div>
+            </a>
+            <a href="#detalii-ultra" onclick="setupUtilizari()" class="card-link">
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: var(--primary-mov);">Utilizări ale ultrasunetelor</h3>
+                    <p>Medicină, Industrie și Agricultură</p>
+                </div>
+            </a>
+        </div>
+        <div class="cta-container" style="margin-top: 40px;">
+            <a href="#sunetul" class="cta-button liquid-glass" style="font-size: 0.8rem; padding: 10px 25px;">← Înapoi la Sunetul</a>
+        </div>
+    </div>
+</section>
+<section id="detalii-ultra" class="content-section">
+    <div class="container">
+        <h2 id="ultra-title">Detalii Ultrasunete</h2>
+        <div class="grid">
+            <div class="card" style="min-height: 400px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div id="ultra-text-content">
+                    </div>
+                <div class="slider-controls">
+                    <button onclick="prevUltraText()" class="nav-btn">← </button>
+                    <button onclick="nextUltraText()" class="nav-btn"> →</button>
+                </div>
+            </div>
+
+            <div class="card slider-card">
+                <div class="slider-container">
+                    <div class="slides-ultra">
+                        <img src="poza1.jpg" class="slide-u active">
+                        <img src="poza2.jpg" class="slide-u">
+                        <img src="poza3.jpg" class="slide-u">
+                        <img src="poza4.jpg" class="slide-u">
+                        <img src="poza5.jpg" class="slide-u">
+                        <img src="poza6.jpg" class="slide-u">
+                    </div>
+                    <div class="slider-controls">
+                        <button onclick="prevPhoto()" class="nav-btn">← </button>
+                        <button onclick="nextPhoto()" class="nav-btn"> →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cta-container" style="margin-top: 40px;">
+            <a href="#ultra" class="cta-button liquid-glass" style="font-size: 0.8rem; padding: 10px 25px;">← Înapoi la Ultrasunete</a>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="infra" class="content-section">
+    <div class="container">
+        <span class="badge badge-red">F < 20 Hz</span>
+        <h2>Infrasunetele</h2>
+        
+        <div class="intro-text">
+            <ul>
+                <li>Sunt produse prin vibrații mecanice de joasă frecvență atât natural (cutremure, fulgere, valuri, avalanșe, vânt, erupții vulcanice), cât și artificial (explozii, motoare diesel, turbine eoliene, ventilatoare, subwoofere).</li>
+                <li>Se propagă la distanțe mari, trecând prin obstacole chiar și structuri solide.</li>
+                <li>Sunt vibrații cu frecvențe cuprinse între 0,001 Hz și 16 Hz și nu pot fi auzite de urechea umană.</li>
+            </ul>
+        </div>
+
+        <div class="grid">
+            <a href="#surse-infra" class="card-link">
+                <div class="card">
+                    <h3 style="color: #ff4d4d;">Surse de infrasunete</h3>
+                    <p>Descoperă originile naturale și artificiale ale acestor vibrații gigant.</p>
+                </div>
+            </a>
+            
+            <a href="#efecte-infra" class="card-link">
+                <div class="card">
+                    <h3 style="color: #ff4d4d;">Efecte ale infrasunetelor</h3>
+                    <p>Află cum influențează aceste sunete invizibile corpul uman și mediul.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="cta-container" style="margin-top: 40px;">
+            <a href="#sunetul" class="cta-button liquid-glass" style="font-size: 0.8rem; padding: 10px 25px;">← Înapoi la Sunetul</a>
+        </div>
+    </div>
+</section>
+<section id="surse-infra" class="content-section gray-bg">
+    <div class="container">
+        <h2>Surse de Infrasunete</h2>
+        <div class="grid">
+            <a href="#surse-naturale" class="card-link">
+                <div class="card">
+                    <h3 style="color: #ff4d4d;">Surse Naturale</h3>
+                    <p>Click pentru a vedea fenomenele geologice, meteorologice și biologice.</p>
+                </div>
+            </a>
+            
+            <a href="#surse-artificiale" class="card-link">
+                <div class="card">
+                    <h3 style="color: #ff4d4d;">Surse Artificiale</h3>
+                    <p>Click pentru a vedea sursele din industrie, transporturi și explozii.</p>
+                </div>
+            </a>
+        </div>
+        <div class="cta-container" style="margin-top: 40px;">
+            <a href="#infra" class="cta-button liquid-glass" style="font-size: 0.8rem; padding: 10px 25px;">← Înapoi la Infrasunete</a>
+        </div>
+    </div>
+</section>
+<section id="surse-naturale" class="content-section">
+    <div class="container">
+        <h2>Surse Naturale</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Naturale:</h3>
+                <p><strong>Fenomene geologice:</strong> cutremure, erupții vulcanice</p>
+                <p><strong>Fenomene meteorologice:</strong> furtuni, fulgere, tornade, vânturi puternice</p>
+                <p><strong>Fenomene acvatice:</strong> valurile oceanelor, cascade</p>
+                <p><strong>Surse biologice:</strong> comunicațiile balenelor, elefanților, etc.</p>
+            </div>
+
+            <div class="card slider-card">
+                <div class="slider-container">
+                    <div class="slides">
+                        <img src="volcan.jpg" class="slide active" alt="Vulcan">
+                        <img src="elephant.jpg" class="slide" alt="Elefant">
+                        <img src="storm.jpg" class="slide" alt="Furtuna">
+                    </div>
+                    <div class="slider-controls">
+                        <button onclick="prevSlide()" class="nav-btn">←</button>
+                        <button onclick="nextSlide()" class="nav-btn">→</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-container" style="margin-top: 40px;">
+            <a href="#surse-infra" class="cta-button liquid-glass" style="font-size: 0.8rem; padding: 10px 25px;">← Înapoi la Surse</a>
+        </div>
+    </div>
+</section>
+
+<section id="surse-artificiale" class="content-section gray-bg">
+    <div class="container">
+        <h2>Surse Artificiale</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Surse artificiale:</h3>
+                <p><strong>Industrie și tehnologie:</strong> Turbine eoliene, motoare diesel, compresoare, instalații de ventilație industrială</p>
+                <p><strong>Transporturi:</strong> trafic rutier intens, avioane, trenuri</p>
+                <p><strong>Explozii:</strong> explozii subterane, activități miniere, detonări militare</p>
+            </div>
+
+            <div class="card slider-card">
+                <div class="slider-container">
+                    <div class="slides-art">
+                        <img src="eoliene.jpg" class="slide-art active" alt="Turbine Eoliene">
+                        <img src="motor.jpg" class="slide-art" alt="Motor Diesel">
+                        <img src="masini.jpg" class="slide-art" alt="Trafic Rutier">
+                    </div>
+                    <div class="slider-controls">
+                        <button onclick="prevSlideArt()" class="nav-btn">←</button>
+                        <button onclick="nextSlideArt()" class="nav-btn">→</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-container" style="margin-top: 40px;">
+            <a href="#surse-infra" class="cta-button liquid-glass" style="font-size: 0.8rem; padding: 10px 25px;">← Înapoi la Surse</a>
+        </div>
+    </div>
+</section>
+<section id="efecte-infra" class="content-section">
+    <div class="container" style="display: flex; flex-direction: column; min-height: 80vh;">
+        <span class="badge badge-red">Impact Biologic</span>
+        <h2>Efecte ale Infrasunetelor</h2>
+        
+        <div class="card">
+            <p style="margin-bottom: 20px; font-weight: 500;">
+                Expunerea la infrasunete, mai ales la intensități mari, poate provoca disconfort fizic și psihologic...
+            </p>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 12px;"><strong>• Disconfort și amețeală</strong> – neliniște, anxietate, vertij</li>
+                <li style="margin-bottom: 12px;"><strong>• Oboseală și stres</strong> – dureri de cap, tulburări de somn</li>
+                <li style="margin-bottom: 12px;"><strong>• Vibrații interne</strong> – posibile dureri la nivelul organelor</li>
+                <li style="margin-bottom: 12px;"><strong>• Dezorientare</strong> – frică, iritare, senzații neobișnuite</li>
+                <li style="margin-bottom: 12px;"><strong>• Afectarea sistemului nervos</strong> – scăderea concentrării la expuneri mari</li>
+            </ul>
+        </div>
+
+        <div class="grid" style="margin-top: auto; margin-bottom: auto; display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+            <a href="#aplicatii-infra" class="card-link" style="width: 100%; max-width: 500px;">
+                <div class="card" style="text-align: center; border: 1px solid var(--primary-mov);">
+                    <h3 style="color: #ff4d4d;">Utilizări și aplicații ale infrasunetelor</h3>
+                    <p>Află cum sunt folosite aceste vibrații în știință, securitate și industrie.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="cta-container">
+            <a href="#infra" class="cta-button liquid-glass" style="font-size: 0.8rem; padding: 10px 25px;">← Înapoi la Infrasunete</a>
+        </div>
+    </div>
+</section>
+
+<section id="aplicatii-infra" class="content-section gray-bg">
+    <div class="container">
+        <span class="badge badge-red">Tehnologie & Monitorizare</span>
+        <h2>Utilizări și aplicații ale infrasunetelor</h2>
+        
+        <div class="card">
+            <p style="margin-bottom: 20px; font-weight: 500;">Datorită propagării pe distanțe mari, infrasunetele sunt folosite pentru:</p>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 15px;"><strong>• Detectarea fenomenelor naturale</strong> – cutremure, erupții vulcanice, furtuni</li>
+                <li style="margin-bottom: 15px;"><strong>• Monitorizarea mediului</strong> – atmosferă, structura internă a Pământului</li>
+                <li style="margin-bottom: 15px;"><strong>• Securitate și armată</strong> – detectarea exploziilor și a aeronavelor</li>
+                <li style="margin-bottom: 15px;"><strong>• Industrie</strong> – monitorizarea echipamentelor mari și a defecțiunilor</li>
+            </ul>
+        </div>
+
+        <div class="cta-container" style="margin-top: 40px;">
+            <a href="#infra" class="cta-button liquid-glass" style="font-size: 0.8rem; padding: 10px 25px;">← Înapoi la Infrasunete</a>
+        </div>
+    </div>
+</section>
+
+<section id="stiai-ca" class="content-section gray-bg">
+    <div class="container">
+        <h2>Știai că?</h2>
+        <div class="grid-3">
+            <div class="fact-card">Liliecii și delfinii folosesc ultrasunetele pentru a "vedea" prin ecolație.</div>
+            <div class="fact-card">Elefanții comunică prin infrasunete la distanțe de peste 10 km.</div>
+            <div class="fact-card">Balenele albastre produc infrasunete auzite la mii de km distanță.</div>
+			<div class="fact-card">Ultrasunetele sunt folosite în medicină (ecografii) fără a afecta țesuturile.</div>
+			<div class="fact-card">Ultrasunetele ajută la diagnosticarea organelor interne.</div>
+			<div class="fact-card">Infrasunetele pot călători mii de kilometri prin aer și sol.</div>
+        </div>
+    </div>
+</section>
+
+<section id="experiment" class="content-section">
+    <div class="container">
+        
+        <h2>Curățător cu Ultrasunete </h2>
+        
+        <div class="grid" style="align-items: center;">
+            <div class="card" style="text-align: left;">
+                <h3>Ce este și cum funcționează?</h3>
+                <p>Ultrasunetele de înaltă frecvență creează milioane de bule microscopice în lichid care, la contactul cu un obiect, implodează și elimină murdăria fără contact mecanic.</p>
+                
+                <h4 style="color: var(--primary-mov); margin-top: 20px;">Dpdv Fizic:</h4>
+                <p>Traductorul piezoelectric transformă energia electrică în vibrații mecanice (peste 20.000 Hz). Acestea produc zone de presiune ridicată și scăzută. În zonele de presiune scăzută, apa "se rupe" creând mici viduri (bule), care la implozie eliberează energie la nivel microscopic.</p>
+
+                <h4 style="color: var(--primary-mov); margin-top: 20px;">Cum să-l faci:</h4>
+                <ol style="padding-left: 20px; line-height: 1.6;">
+                    <li>Achiziționează un modul de traductor piezoelectric.</li>
+                    <li>Se lipește traductorul pe fundul unui vas metalic cu adeziv rigid.</li>
+                    <li>Se umple vasul cu apă și adaugă puțin detergent.</li>
+                    <li>Conectează sursa și introdu obiectele pentru curățare.</li>
+                </ol>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="card" style="padding: 10px; border: 2px solid var(--primary-mov); background: transparent;">
+                    <img src="ultra.png" alt="Experiment Ultrasunete" style="width: 100%; border-radius: 8px; display: block;">
+                </div>
+                
+                <div class="cta-container" style="margin-top: 20px;">
+                    <p style="font-size: 0.9rem; margin-bottom: 10px; color: var(--text-secondary);">Procesul de construcție pas cu pas:</p>
+                    <a href="https://www.youtube.com/watch?v=RLgFSdSDE-8" target="_blank" class="cta-button liquid-glass" style="padding: 12px 25px; font-size: 0.9rem;">
+                        EXPERIMENTUL PE YOUTUBE ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="kahoot" class="content-section gray-bg">
+    <div class="container">
+        <h2 style="text-align: center;">Testează-ți cunoștințele</h2>
+        <div class="cta-container">
+            <a href="https://create.kahoot.it/share/fizica/562867b8-4b6b-45f6-9f68-aade63a72828" target="_blank" class="cta-button liquid-glass">JOACĂ KAHOOT</a>
+        </div>
+    </div>
+</section>
+
+<section id="concluzii" class="content-section">
+    <div class="container">
+        
+        <h2>Concluzii</h2>
+        
+        <div class="card" style="border-left: 5px solid var(--primary-mov);">
+            <ul style="list-style-type: none; padding-left: 0; font-size: 1.1rem; line-height: 2;">
+                <li><strong>•</strong> Infrasunetele și ultrasunetele sunt sunete invizibile pentru urechea umană.</li>
+                <li><strong>•</strong> Deși nu le auzim, ele pot fi detectate și măsurate științific.</li>
+                <li><strong>•</strong> Infrasunetele apar frecvent în natură și se propagă pe distanțe foarte mari.</li>
+                <li><strong>•</strong> Ele pot influența starea fizică și psihică a oamenilor.</li>
+                <li><strong>•</strong> Ultrasunetele sunt sigure și extrem de utile în medicină.</li>
+                <li><strong>•</strong> Sunt folosite pe scară largă în industrie și tehnologie modernă.</li>
+                <li><strong>•</strong> Ambele au aplicații importante în securitate și cercetare științifică.</li>
+                <li><strong>•</strong> Studiul lor arată că sunetul are un impact major, chiar și dincolo de auz.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="bibliografie" class="content-section gray-bg">
+    <div class="container">
+        
+        <h2>Bibliografie/Resurse</h2>
+        
+        <div class="grid">
+            <div class="card" style="text-align: left;">
+               
+                <ul style="list-style-type: none; padding: 0; line-height: 1.8;">
+                    <li><strong>• Fizică: Manual pentru clasa a XI-a</strong></li>
+                    <li><strong>• Telework.ro</strong> – <a href="https://www.telework.ro/ro/sunetul-unde-sonore/" target="_blank" style="color: inherit;">Sunetul și undele sonore</a>.</li>
+                    <li><strong>• Fizichim.ro</strong> – <a href="https://www.fizichim.ro/" target="_blank" style="color: inherit;">Platformă de resurse educaționale fizică-chimie</a>.</li>
+                    <li><strong>• Răsfoiesc.com</strong> – <a href="https://www.rasfoiesc.com/educatie/fizica/Acustica-Clasificarea-sunetelo44.php" target="_blank" style="color: inherit;">Acustica: Clasificarea sunetelor</a>.</li>
+                </ul>
+            </div>
+
+            <div class="card" style="text-align: left;">
+               
+                <ul style="list-style-type: none; padding: 0; line-height: 1.8;">
+                    <li><strong>• Agerpres</strong> – <a href="https://www.agerpres.ro/flux-documentare/2015/10/14/stiinta-ultrasunetele-si-infrasunetele-aplicatii-si-masuri-de-protectie-10-22-47" target="_blank" style="color: inherit;">Aplicații și măsuri de protecție</a>.</li>
+                    <li><strong>• CSID.ro</strong> – <a href="https://www.csid.ro/sanatate/medicina-alternativa/ultrasunetele-ce-sunt-beneficii-19664846/" target="_blank" style="color: inherit;">Ultrasunetele: Beneficii în medicină</a>.</li>
+                    <li><strong>• NeverThoughtAboutThat</strong> – <a href="https://neverthoughtaboutthat.com/ro/infrasunete-%C8%99i-ultrasunete-iopspark/" target="_blank" style="color: inherit;">Infrasunete și Ultrasunete - IOPSpark</a>.</li>
+                    <li><strong>• Branchus Creations (YouTube)</strong> – Sursa video pentru experimentul practic.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-note" style="margin-top: 50px; text-align: center; opacity: 0.6; font-size: 0.8rem;">
+            <p>&copy; 2026 Proiect Fizică infrasunete & Ultrasunete - CNTVB.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Proiect Fizică - Realizat în stil Koders</p>
+</footer>
+
+<script>
+   // --- CONFIGURARE DATE ---
+const ultraData = {
+    surse: [
+        `<h3>Artificiale:</h3><p><strong>Generatoare Magnetostrictive:</strong> Utilizează proprietatea materialelor feromagnetice de a-și schimba dimensiunile într-un câmp magnetic variabil.</p><p><strong>Traductoare Piezoelectrice:</strong> Cristale de cuarț sau ceramică (ex: titanat de bariu) care vibrează atunci când sunt supuse unui câmp electric alternativ, fiind cele mai comune surse pentru aplicații medicale și industriale.
+</p><p><strong>Surse Mecanice:</strong> Fluiere și sirene ultrasonice, utilizate de obicei pentru semnalizare sau dresaj.
+</p>`,
+        `<h3>Naturale:</h3><p><strong>Lilieci:</strong> Majoritatea liliecilor produc ultrasunete în laringe, emițând sunete de înaltă frecvență prin gură sau nas.
+</p><p><strong>Delfini:</strong> Spre deosebire de lilieci, delfinii produc sunete (click-uri) prin intermediul unor structuri nazale numite buze fonice, localizate sub orificiul respirator.
+</p><p>Sunetele sunt focalizate și amplificate de "melon", o structură grasă de pe fruntea delfinului, care acționează ca o lentilă acustică.
+</p><p>Delfinii produc click-uri cu frecvențe cuprinse între 40 și 150 kHz
+</p>`
+    ],
+    utilizari: [
+        `<h3>Medicină:</h3><p><strong>Chirurgie:</strong> Sunt utilizate pentru tăierea precisă a țesuturilor moi sau a oaselor (piezochirurgie) și pentru îndepărtarea tartrului dentar.
+</p><p><strong>Terapii Avansate:</strong> Tehnologia HIFU (High-Intensity Focused Ultrasound) permite distrugerea tumorilor canceroase sau a calculilor renali fără incizii.
+</p><p><strong>Aerosoli:</strong> Dispozitivele cu ultrasunete transformă medicamentele lichide în particule fine pentru tratamentul afecțiunilor respiratorii.
+</p>`,
+        `<h3>Industrie și Tehnică:</h3><p><strong>Prelucrare Materialelor:</strong> Se folosesc pentru sudarea plasticului sau metalelor subțiri, precum și pentru perforarea materialelor dure (sticlă, ceramică).</p><p><strong>Mentenanță Predictivă:</strong> Detectarea timpurie a scurgerilor de gaze sub presiune sau a defectelor la rulmenți în fabrici, prin identificarea sunetelor de înaltă frecvență imperceptibile omului.
+</p><p><strong>Industria Alimentară:</strong> Utilizate pentru sterilizarea și conservarea alimentelor prin distrugerea microorganismelor sau pentru omogenizarea lichidelor (crearea emulsiilor).
+ </p>`,
+        `<h3>Agricultură și mediu:</h3><p><strong>Protecția Culturilor:</strong> Dispozitivele cu ultrasunete sunt folosite ca repelenți pentru a îndepărta rozătoarele sau animalele sălbatice (mistreți, căprioare) din zonele agricole.
+</p><p><strong>Ecolocație Naturală: </strong>În cercetarea biologică, se studiază ultrasunetele emise de lilieci și delfini pentru monitorizarea ecosistemelor.
+</p>`,
+        `<h3>Cosmetica:</h3><p><strong>Tratamente Faciale:</strong> Utilizate pentru curățarea profundă a pielii (peeling cavitațional), reducerea celulitei și stimularea regenerării țesuturilor prin efect termic.</p>`
+    ]
+};
+
+// --- VARIABILE DE STARE ---
+let currentType = 'surse'; 
+let textIdx = 0;
+let photoIdx = 0;
+let minP = 0;
+let maxP = 2;
+
+// --- FUNCȚII ULTRASUNETE ---
+function setupSurse() {
+    currentType = 'surse';
+    textIdx = 0;
+    minP = 0; maxP = 2; photoIdx = 0;
+    document.getElementById('ultra-title').innerText = "Surse de Ultrasunete";
+    updateUI();
+}
+
+function setupUtilizari() {
+    currentType = 'utilizari';
+    textIdx = 0;
+    minP = 3; maxP = 5; photoIdx = 3;
+    document.getElementById('ultra-title').innerText = "Utilizări ale Ultrasunetelor";
+    updateUI();
+}
+
+function updateUI() {
+    // Actualizare Text
+    const content = ultraData[currentType][textIdx];
+    document.getElementById('ultra-text-content').innerHTML = `<div class="ultra-info-block active-block">${content}</div>`;
+    
+    // Actualizare Galerie Foto
+    const photos = document.querySelectorAll('.slide-u');
+    photos.forEach(p => p.classList.remove('active'));
+    photos[photoIdx].classList.add('active');
+}
+
+function nextUltraText() {
+    textIdx = (textIdx + 1) % ultraData[currentType].length;
+    updateUI();
+}
+
+function prevUltraText() {
+    textIdx = (textIdx - 1 + ultraData[currentType].length) % ultraData[currentType].length;
+    updateUI();
+}
+
+function nextPhoto() {
+    photoIdx = (photoIdx >= maxP) ? minP : photoIdx + 1;
+    updateUI();
+}
+
+function prevPhoto() {
+    photoIdx = (photoIdx <= minP) ? maxP : photoIdx - 1;
+    updateUI();
+}
+
+// --- LOGICĂ GENERALĂ (NAVBAR & REVEAL) ---
+window.onscroll = function() {
+    const nav = document.getElementById("main-nav");
+    if (window.scrollY > 10) nav.classList.remove("at-top");
+    else nav.classList.add("at-top");
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('reveal-visible');
+    });
+}, { threshold: 0.15 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toAnimate = document.querySelectorAll('.card, h2, .badge, .fact-card, .experiment-box, .hero h1, .hero p, .cta-container, .intro-text');
+    toAnimate.forEach((el) => {
+        el.classList.add('reveal-hidden');
+        observer.observe(el);
+    });
+});
+
+// --- FUNCȚII SLIDER INFRASUNETE ---
+let infraIdx = 0;
+function showSlide(n) {
+    const slides = document.querySelectorAll('#surse-naturale .slide');
+    infraIdx = (n + slides.length) % slides.length;
+    slides.forEach(s => s.classList.remove('active'));
+    slides[infraIdx].classList.add('active');
+}
+function nextSlide() { showSlide(infraIdx + 1); }
+function prevSlide() { showSlide(infraIdx - 1); }
+
+let artIdx = 0;
+function showSlideArt(n) {
+    const slides = document.querySelectorAll('.slide-art');
+    artIdx = (n + slides.length) % slides.length;
+    slides.forEach(s => s.classList.remove('active'));
+    slides[artIdx].classList.add('active');
+}
+function nextSlideArt() { showSlideArt(artIdx + 1); }
+function prevSlideArt() { showSlideArt(artIdx - 1); }
+</script>
+
+</body>
+</html>
